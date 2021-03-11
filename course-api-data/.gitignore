@@ -12,6 +12,7 @@ target/
 .classpath
 mvnw
 mvnw.cmd
+*.log
 
 ### STS ###
 .apt_generated
