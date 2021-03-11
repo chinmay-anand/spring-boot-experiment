@@ -1,5 +1,6 @@
 package com.chinmay.springbootexperiment.topic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -8,12 +9,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TopicService {
-	private List<Topic> topics = Arrays.asList(
-			new Topic("mathematics", "Mathematics Course", "Mathematics course description"),
-			new Topic("english", "English Course", "English course description"),
-			new Topic("spring", "Spring Boot Course", "Spring Boot course description"),
-			new Topic("javascript", "Javascript Course", "Javascript course description")
-			);
+	private List<Topic> topics = new ArrayList<Topic>( 
+			Arrays.asList(
+				new Topic("mathematics", "Mathematics Course", "Mathematics course description"),
+				new Topic("english", "English Course", "English course description"),
+				new Topic("spring", "Spring Boot Course", "Spring Boot course description"),
+				new Topic("javascript", "Javascript Course", "Javascript course description")
+			));
+	//Arrays.asList() returned list is not editable
+	//We used new ArrayList() makes a copy of the result of Arrays.asList() to make it mutable / editable
 
 	public List<Topic> getAllTopics(){
 		return topics;
@@ -33,5 +37,10 @@ public class TopicService {
 		return new Topic();
 	}
 
+	public void addTopic(Topic topic) {
+		topics.add(topic);
+		//Arrays.asList() returns an IMMUTABLE object which can't be modified
+		//So we need to get an object our of it using new ArrayList<> wchich can be modified
+	}
 
 }
