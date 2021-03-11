@@ -20,10 +20,18 @@ public class TopicService {
 	}
 	
 	public Topic getTopic(String id) {
-		//Traverses thru the list of topics to get the first topic with matching id and returns it
-		//If there is no match then java.util.NoSuchElementException is thrown and browser show Whitelabel Error  
-		return topics.stream()
-				.filter(tpc -> tpc.getId().equals(id))
-				.findFirst().get();
+		// Traverses thru the list of topics to get the first topic with matching id and returns it
+		//If there is no match then java.util.NoSuchElementException is thrown which we can catch and handle (may be return an empty constructor  
+		try {
+			return topics.stream()
+					.filter(tpc -> tpc.getId().equals(id))
+					.findFirst().get();
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+			//If not handled, "Whitelabel Error" is returned by the underlying tomcat.
+		}
+		return new Topic();
 	}
+
+
 }
