@@ -4,4 +4,7 @@
   <artifactId>course-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Course API</name>
+  <properties>
+  	<java.version>1.8</java.version>
+  </properties>
 </project>
