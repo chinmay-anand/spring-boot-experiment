@@ -4,6 +4,17 @@
   <artifactId>course-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Course API</name>
+  
+  <!-- Below "parent" tag makes this project a child of "spring-boot-starter" project which makes all spring features available to us
+  	   This also makes auto completion in pom.xml easier for inclusion of spring modules.
+   -->
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.3</version>
+		<!--relativePath/--> <!-- lookup parent from repository - NOT needed -->
+  </parent>
+  
   <properties>
   	<java.version>1.8</java.version>
   </properties>
