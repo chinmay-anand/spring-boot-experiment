@@ -1,7 +1,12 @@
 package com.chinmay.springbootexperiment.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 //This is the model class to hold the records to be inserted to database later
+@Entity
 public class Topic {
+	@Id
 	private String id;			//course identifier
 	private String name;		//course name
 	private String description;	//course description
