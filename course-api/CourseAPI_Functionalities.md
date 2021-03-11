@@ -5,5 +5,5 @@
 	* GET	/topics/id	Gets the specific topic
 	* POST	/topics		Creates a new topic (post body will have the new topic details)
 	* PUT	/topics/id	Updates the topic (put body tells details to be updated)
-	* DELETE	/topics/id	c
+	* DELETE	/topics/id	Deletes the topic
 	
