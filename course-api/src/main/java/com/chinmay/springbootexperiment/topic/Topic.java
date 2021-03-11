@@ -1,4 +1,4 @@
-package com.chinmay.springbootexperiment.topics;
+package com.chinmay.springbootexperiment.topic;
 
 //This is the model class to hold the records to be inserted to database later
 public class Topic {

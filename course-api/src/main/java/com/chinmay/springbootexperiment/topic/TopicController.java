@@ -1,4 +1,4 @@
-package com.chinmay.springbootexperiment.topics;
+package com.chinmay.springbootexperiment.topic;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,8 +13,8 @@ public class TopicController {
 		/** 
 		 *  In @RequestMapping("/topics")  annotation, URI is "/topics" and default method is "GET". For PUT, POST etc we need to explicitly specify
 		 *  Once server is started, test it using http://localhost:8080/topics in browser
-		 *  The result will eb a json representation of the Topic list.
-		 *  The Java object to json conversion was taken care by Spring MVC.
+		 *  The result will be a json representation of the Topic list.
+		 *  The Java object to json conversion is taken care by Spring MVC.
 		 *  
 		 */
 		return Arrays.asList(
