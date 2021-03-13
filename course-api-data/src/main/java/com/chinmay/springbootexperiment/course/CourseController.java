@@ -52,4 +52,17 @@ public class CourseController {
 		courseService.deleteCourse(id);
 	}
 
+/**
+ * TO PASS PARAMETERS FROM URI(browser thru uicontroller) TO BACKEND (services) -- USE FOLLOWING APPROACH
+In @RequestMapping annotation 
+	□ Pass "GET/PUT/POST/DELETE" http methods through "method=" argument.
+	□ Pass URI path through "value=" argument
+In arguments of mapping custom functions
+	□ Pass the variable from URI like "{id}" with argument annotation of "@PathVariable"
+		® No need to pass anything to this annotation if URI variable and mapping function parameter share the same name
+		® Need to pass the name of the URI variable I fit is with a different name from the mapping function parameter being annotated.
+	□ Pass the Model class (MVC converts to java class from json) annotated with "@RequestBody"
+ */
+	
+	
 }
