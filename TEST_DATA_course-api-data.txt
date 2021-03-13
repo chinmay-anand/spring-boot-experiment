@@ -1,0 +1,36 @@
+Chinmay, 13-Mar-2021
+========================
+TEST DATA FOR course-api
+========================
+
+Tool used: Postman
+For all the POSTs set Key - Value pair in header: "Content-Type" and "application/json" respectively.
+-------------------------
+POST http://localhost:8080/topics
+BODY: raw
+{
+    "id": "english",
+    "name": "English Course",
+    "description": "English course description"
+}
+-------------------------
+GET Requests
+-------------------------
+http://localhost:8080/topics
+http://localhost:8080/topics/english
+
+TEST DATA FOR course-api-data
+========================
+* Use test data for course-api aswell
+
+POST http://localhost:8080/topics/english/courses
+BODY: raw
+{
+    "id": "english-indian",
+    "name": "indian English Course",
+    "description": "Indian English course description"
+}
+-------------------------
+http://localhost:8080/topics/english/courses
+http://localhost:8080/topics/english/courses/english-indian
+-------------------------
