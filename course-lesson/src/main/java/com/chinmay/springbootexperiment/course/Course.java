@@ -1,7 +1,7 @@
 package com.chinmay.springbootexperiment.course;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+//import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
